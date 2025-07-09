@@ -37,6 +37,7 @@ public class WebSecurityConfig {
             "/*.css",
             "/*.js",
             "/*.js.map",
+            "/photos/**",
             "/fonts**", "/favicon.ico", "/resources/**", "/error"};
 
     @Bean

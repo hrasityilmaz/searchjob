@@ -22,14 +22,14 @@ import jakarta.validation.Valid;
 
 
 @Controller
-public class UserController {
+public class UsersController {
 
     private final UsersTypeService usersTypeService;
     private final UsersService usersService;
     
   
     
-    public UserController(UsersTypeService usersTypeService, UsersService usersService) {
+    public UsersController(UsersTypeService usersTypeService, UsersService usersService) {
         this.usersTypeService = usersTypeService;
         this.usersService = usersService;
     }
