@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import art.timestop.searchjob.services.UsersService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
@@ -35,6 +37,12 @@ public class JobPostActivityController {
 
         return "dashboard";
     }
+
+    @GetMapping("/dashboard/add")
+    public String getMethodName(@RequestParam String param) {
+        return new String();
+    }
+    
     
 
 }
