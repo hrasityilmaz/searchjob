@@ -32,7 +32,6 @@ public class RecruiterProfile {
     private String profilePhoto;
     
     public RecruiterProfile() {
-     
     }
 
     public RecruiterProfile(Users users) {

@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 public class JobLocation {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Integer Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private String city;
     private String state;
@@ -20,18 +20,18 @@ public class JobLocation {
     }
 
     public JobLocation(Integer id, String city, String state, String country) {
-        Id = id;
+        this.id = id;
         this.city = city;
         this.state = state;
         this.country = country;
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getCity() {
@@ -60,7 +60,11 @@ public class JobLocation {
 
     @Override
     public String toString() {
-        return "JobLocation [Id=" + Id + ", city=" + city + ", state=" + state + ", country=" + country + "]";
+        return "JobLocation{" +
+                "id=" + id +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", country='" + country + '\'' +
+                '}';
     }
-
 }

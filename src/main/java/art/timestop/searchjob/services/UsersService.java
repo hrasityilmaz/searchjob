@@ -9,4 +9,5 @@ public interface UsersService {
     public Users addNew(Users users);
     Optional<Users> getUserByEmail(String email);
     public Object getCurrentUserProfile();
+    public Users getCurrentUser();
 }

@@ -80,4 +80,17 @@ public class UsersServiceImpl implements UsersService {
     public Optional<Users> getUserByEmail(String email) {
         return usersRepository.findByEmail(email);
     }
+
+    @Override
+    public Users getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)) {
+            String username = authentication.getName();
+            Users user = usersRepository.findByEmail(username)
+                                    .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+            return user;
+        }
+        // Option A: Return null if the user is anonymous
+        return null; // Or throw a specific exception, e.g., new NotAuthenticatedException("User is anonymous")
+}
 }

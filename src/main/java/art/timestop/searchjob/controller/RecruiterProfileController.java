@@ -27,14 +27,14 @@ import art.timestop.searchjob.util.FileUploadUtil;
 
 @Controller
 @RequestMapping("/recruiter-profile")
-public class RecruiterProcileController {
+public class RecruiterProfileController {
 
     private final UsersRepository usersRepository;
     private final RecruiterProfileService recruiterProfileService;
 
    
 
-    public RecruiterProcileController(UsersRepository usersRepository,
+    public RecruiterProfileController(UsersRepository usersRepository,
             RecruiterProfileService recruiterProfileService) {
         this.usersRepository = usersRepository;
         this.recruiterProfileService = recruiterProfileService;
